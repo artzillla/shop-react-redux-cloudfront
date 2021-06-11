@@ -1,9 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Task 2
+
+- CloudFront URL https://d2uro2jjtnnt6w.cloudfront.net
+- S3 http://artzilla-nodejs-in-aws-app.s3-website-us-east-1.amazonaws.com
 
 ## Available Scripts
 
 In the project directory, you can run:  
-You can use NPM instead of YARN (Up to you)  
+You can use NPM instead of YARN (Up to you)
 
 ### `yarn start` OR `npm run start`
 
