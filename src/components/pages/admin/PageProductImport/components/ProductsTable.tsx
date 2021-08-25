@@ -16,7 +16,7 @@ export default function ProductsTable() {
   const [products, setProducts] = useState<any>([]);
 
   useEffect(() => {
-    axios.get(`${API_PATHS.bff}/product`).then((res) => setProducts(res.data));
+    axios.get(`${API_PATHS.bff}/products`).then((res) => setProducts(res.data));
   }, []);
 
   const onDelete = (id: string) => {
@@ -33,7 +33,7 @@ export default function ProductsTable() {
         <TableHead>
           <TableRow>
             <TableCell>Title</TableCell>
-            <TableCell align='right'>Description</TableCell>
+            <TableCell align='right'>SKU</TableCell>
             <TableCell align='right'>Price</TableCell>
             <TableCell align='right'>Count</TableCell>
             <TableCell align='right'>Action</TableCell>
@@ -42,6 +42,9 @@ export default function ProductsTable() {
         <TableBody>
           {products.map((product: any) => (
             <TableRow key={product.id}>
+              <TableCell component='th' scope='row'>
+                {product.sku}
+              </TableCell>
               <TableCell component='th' scope='row'>
                 {product.name}
               </TableCell>
